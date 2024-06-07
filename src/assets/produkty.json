@@ -1,0 +1,12 @@
+[
+    {
+        "name": "Bułka",
+        "price": "100zł",
+        "img":"blablaba"
+    },
+    {
+        "name": "Chleb",
+        "price": "100zł",
+        "img": "blablaba"
+    }
+]
