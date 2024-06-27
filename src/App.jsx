@@ -1,22 +1,21 @@
 import { Nav } from "./Component/Nav"
 import { Hero } from "./Component/Hero"
-import { Piekarnia } from "./Component/Piekarnia"
-import { Cukiernia } from "./Component/Cukiernia"
-import { Sklepy } from "./Component/Sklepy"
-import { ONas } from "./Component/ONas"
-import { Kontakt } from "./Component/Kontakt"
+import { About } from "./Component/About"
 
 function App() {
   return (
-    <div className=" bg-[#fff3ea] min-h-[300vh]">
+    <>
+    <div className=" bg-[#fff3ea] md:hidden lg:block sm:hidden ssm:hidden">
       <Nav />
       <Hero />
-      <Piekarnia />
-      <Cukiernia />
-      <Sklepy />
-      <ONas />
-      <Kontakt />
+      <About />
     </div>
+    <div className=" sm:flex ssm:flex md:flex lg:hidden h-screen w-screen items-center justify-center text-5xl">
+      <p>
+        Mobile coming soon!
+      </p>
+    </div>
+    </>
   )
 }
 

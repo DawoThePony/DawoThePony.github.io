@@ -11,25 +11,26 @@ export const Nav = () => {
         setToggleMenu(false);
     }
 
-    const linkStyle = 'hover:bg-slate-600 hover:bg-opacity-20 rounded-full p-2'
+    const linkStyle = 'px-4 text-center'
 
     const Link = ({destination, style, name}) => <a href={destination} className={style}>{name}</a>
 
     return ( <> 
     {/* Desktop Nav */}
-    <div className=" z-50 w-screen fixed flex items-center justify-between text-black font-sans bg-[#282828] opact bg-opacity-[46%] text-white" >
-        <div className="ssm:hidden sm:hidden md:flex m-2 lg:flex w-screen items-center justify-evenly">
-            <Link destination={'#Piekarnia'} style={linkStyle} name={'Piekarnia'}/>
-            <Link destination={'#Cukiernia'} style={linkStyle} name={'Cukiernia'}/>
-            <Link destination={'#Sklepy'} style={linkStyle} name={'Sklepy'}/>
-                <a href="#" className=" transform scale-[300%] translate-y-[25vh] transition duration-500 hover:scale-100 hover:translate-y-0"><img src="/logo_biale.png" alt="" className=" h-[10vh]" /></a> 
-            <Link destination={'#ONas'} style={linkStyle} name={'O Nas'}/>
-            <Link destination={'facebook.com'} style={linkStyle} name={'Facebook'}/>
-            <Link destination={'#Kontakt'} style={linkStyle} name={'Kontakt'}/>
-        </div>
+    <div className=" z-50 w-screen fixed flex items-center justify-evenly text-black py-2 px-5 border-b-2 border-black backdrop-blur-lg" >
+            <div className="flex items-center justify-start w-full">
+                
+                <a href="#" className={linkStyle}>Piekarnia Cukiernia <br /> Tomasz Barański</a>
+                <Link destination={''} style={linkStyle} name={'O nas'} />
+                <Link destination={''} style={linkStyle} name={'Oferta'} />
+                <Link destination={''} style={linkStyle} name={'Sklepy'} />
+                <Link destination={''} style={linkStyle} name={'Kontakt'} />
+            </div>
+            <div className=" flex justify-between">
+                <a href="#" className='border-black border-2 px-2 mx-3 w-max hover:cursor-pointer'>Znajdź nas</a>
+                <a href="#" className='border-black border-2 px-2 mx-3 bg-black text-white hover:cursor-pointer'>Kontakt</a>
+            </div>
     </div>
-        
-    {/* mobile menu */}
-    </>
+     </>
 );
 };
