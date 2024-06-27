@@ -8,7 +8,7 @@ import { Kontakt } from "./Component/Kontakt"
 
 function App() {
   return (
-    <>
+    <div className=" bg-[#fff3ea] min-h-[300vh]">
       <Nav />
       <Hero />
       <Piekarnia />
@@ -16,7 +16,7 @@ function App() {
       <Sklepy />
       <ONas />
       <Kontakt />
-    </>
+    </div>
   )
 }
 

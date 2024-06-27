@@ -3,17 +3,16 @@ import { BsFacebook, BsTwitter } from "react-icons/bs";
 export const Hero = () => {
   return (
     <>
-      <div className="flex text-center lg:flex md:flex sm:hidden ssm:hidden">
-        <div className= "h-screen w-1/2 bg-blue-100">
-          <h1 className=" absolute top-1/2 w-min right-3/4 text-3xl">Piekarnia <a href="#Piekarnia"><button className=" bg-slate-500 bg-opacity-20 p-2 rounded-2xl m-5 hover:bg-opacity-100">Więcej</button></a></h1>
-        </div>
-        <div className=" h-screen w-1 bg-white">
-
-        </div>
-        <div className=" h-screen w-1/2 bg-pink-100">
-          <h1 className=" absolute top-1/2 w-min left-3/4 text-3xl">Cukiernia <a href="#Cukiernia"><button className=" bg-slate-500 bg-opacity-20 p-2 rounded-2xl m-5 hover:bg-opacity-100">Więcej</button></a></h1>
-        </div>
+  <div>
+    <div>
+    <img src="/hero_bg.png" alt="" className=" h-[60vh] w-screen object-cover object-bottom" />
+    </div>
+      <div className=" w-[55%] mx-auto">
+        <p className=" text-[20px] font-light w-auto h-fit text-justify">Prawdziwa magia piekarza polega na przekształcaniu skromnych składników w niezwykłe przysmaki. Zaledwie kilka prostych składników, takich jak mąka, woda, drożdże i sól, w rękach utalentowanego piekarza staje się czymś wyjątkowym. To nie tylko kwestia przepisu, ale także intuicji, doświadczenia i pasji. <br /><br />
+  Dlatego nasi piekarze i cukiernicy to prawdziwi czarodzieje. Potrafią zamienić te podstawowe składniki w chleb, który ma chrupiącą skórkę i miękki, puszysty środek. Tworzą ciasta, które rozpływają się w ustach, i desery, które cieszą oko i podniebienie.
+        </p>
       </div>
-    </>
-  );
+    </div>
+</>  
+);
 };
