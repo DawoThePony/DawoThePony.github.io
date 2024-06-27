@@ -22,7 +22,7 @@ export const Nav = () => {
             <Link destination={'#Piekarnia'} style={linkStyle} name={'Piekarnia'}/>
             <Link destination={'#Cukiernia'} style={linkStyle} name={'Cukiernia'}/>
             <Link destination={'#Sklepy'} style={linkStyle} name={'Sklepy'}/>
-                <a href="#" className=" transform scale-[300%] translate-y-[25vh] transition duration-500 hover:scale-100 hover:translate-y-0"><img src="/logo_biale.png" alt="" className=" w-24" /></a> 
+                <a href="#" className=" transform scale-[300%] translate-y-[25vh] transition duration-500 hover:scale-100 hover:translate-y-0"><img src="/logo_biale.png" alt="" className=" h-[10vh]" /></a> 
             <Link destination={'#ONas'} style={linkStyle} name={'O Nas'}/>
             <Link destination={'facebook.com'} style={linkStyle} name={'Facebook'}/>
             <Link destination={'#Kontakt'} style={linkStyle} name={'Kontakt'}/>
