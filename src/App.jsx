@@ -10,7 +10,7 @@ const Link = ({destination, style, name}) => <a href={destination} className={st
 function App() {
     return ( <> <div  className=" bg-[#fafafa]">
             {/*************** Nav Section *****************/}
-            <div className="ssm:h-12 md:h-auto md:flex z-50 w-screen fixed flex items-center justify-between text-black py-2 md:px-20 border-b-[1px] border-black backdrop-blur-lg bg-[#fafafa] bg-opacity-50 text-nowrap">
+            <div className="ssm:h-12 md:h-auto md:flex z-50 w-screen fixed flex items-center justify-between text-black py-2 md:px-20 border-b-[1px] border-black backdrop-blur-md md:bg-[#fafafa] md:bg-opacity-50 text-nowrap">
                 <div className="md:flex items-center md:justify-start md:w-full">
                     <a href="#" className="px-5 pr-10 md:flex items-center text-center">
                         <img src="/logo_czarne.png" alt="Logo" className="ssm:h-10 ssm:ml-5 md:m-0 md:h-20 md:mr-10"/>
@@ -29,7 +29,7 @@ function App() {
                     <a href="#Contact"className='border-black border-2 px-2 mx-3 bg-black text-white hover:cursor-pointer rounded-lg p-1'>Kontakt</a>
                 </div>
                 <div className="ssm:flex justify-end md:hidden">
-                    <GiHamburgerMenu className=" text-5xl m-10"/>
+                    <GiHamburgerMenu className=" text-3xl m-10"/>
                 </div>
             </div>
             {/*************** Hero Section *****************/}
@@ -190,19 +190,21 @@ function App() {
                         </div>
                     </div>
                     {/* Right side */}
-                    <div className=" md:w-1/2 grid md:grid-cols-2 m-auto gap-5 justify-items-center ssm:m-5 md:m-0">
-                        <img
-                        src="/product1.jpg"
-                        alt="placeholder"
-                        className="rounded-lg object-cover h-96 w-full"/>
-                        <img
-                        src="/product2.jpg"
-                        alt="placeholder"
-                        className=" object-cover rounded-lg h-96 w-full"/>
-                        <img
-                        src="/product3.jpg"
-                        alt="placeholder"
-                        className="rounded-lg object-cover md:col-span-2 h-96 w-full"/>
+                    <div className=" min-h-screen flex flex-col justify-center">
+                        <div className=" grid md:grid-cols-2 m-auto md:h-min gap-5 justify-items-center ssm:m-5 md:m-0">
+                            <img
+                            src="/product1.jpg"
+                            alt="placeholder"
+                            className="rounded-lg object-cover h-96 w-full"/>
+                            <img
+                            src="/product2.jpg"
+                            alt="placeholder"
+                            className=" object-cover rounded-lg h-96 w-full"/>
+                            <img
+                            src="/product3.jpg"
+                            alt="placeholder"
+                            className="rounded-lg object-cover md:col-span-2 h-96 w-full"/>
+                        </div>
                     </div>
             </div>
             {/* ************** Shops Section **************** */}
