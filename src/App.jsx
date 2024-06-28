@@ -10,10 +10,10 @@ const Link = ({destination, style, name}) => <a href={destination} className={st
 function App() {
     return ( <> <div  className=" bg-[#fafafa]">
             {/*************** Nav Section *****************/}
-            <div className="md:flex z-50 w-screen fixed flex items-center justify-between text-black py-2 md:px-20 border-b-[1px] border-black backdrop-blur-lg bg-[#fafafa] bg-opacity-50 text-nowrap">
+            <div className="ssm:h-20 md:h-auto md:flex z-50 w-screen fixed flex items-center justify-between text-black py-2 md:px-20 border-b-[1px] border-black backdrop-blur-lg bg-[#fafafa] bg-opacity-50 text-nowrap">
                 <div className="md:flex items-center md:justify-start md:w-full">
                     <a href="#" className="px-5 pr-10 md:flex items-center text-center">
-                        <img src="/logo_czarne.png" alt="Logo" className="w-20 md:mr-10"/>
+                        <img src="/logo_czarne.png" alt="Logo" className="ssm:h-16 ssm:ml-5 md:m-0 md:h-20 md:mr-10"/>
                         <p className="ssm:hidden md:flex">Piekarnia Cukiernia<br/>Tomasz Barański</p>
                     </a>
                     <div className="ssm:hidden md:flex">
@@ -72,7 +72,7 @@ function App() {
                         </p>
                     </div>
                     {/* gallery */}
-                    <div className="flex ssm:flex-col md:flex-row justify-between">
+                    <div className="ssm:mx-5 md:mx-0 flex ssm:flex-col md:flex-row justify-between">
                         <div className=" flex flex-col ssm:w-full md:w-[30%] items-center">
                             <img src="/about1.jpg" alt="" className=" m-5 rounded-3xl w-96 h-96 object-cover"/>
                             <h2 className="text-2xl font-semibold p-2">Świeże i Lokalne Składniki</h2>
@@ -208,12 +208,12 @@ function App() {
             {/* ************** Shops Section **************** */}
             <div id="Shops" className="flex flex-col justify-between text-center pt-28">
                 <h1 className=" text-5xl mb-10">Nasze sklepy</h1>
-                <div className="flex justify-center gap-5 text-2xl">
+                <div className="ssm:hidden md:flex justify-center gap-5 text-2xl">
                     <div className=" bg-black text-white p-2 px-5 font-bold rounded-xl">Galeria</div>
                     <div className="flex border-2 border-black p-2 px-5 font-bold items-center rounded-xl"><p>Mapa</p></div>
                 {/* Galeria */}
                 </div>
-                <div className="p-20 grid lg:grid-cols-3 md:grid-cols-2 sm: grid-cols-1  gap-20 mx-auto justify-items-center">
+                <div className="ssm:mt-20 md:mt-0 md:p-20 grid lg:grid-cols-3 md:grid-cols-2 sm: grid-cols-1  gap-20 mx-auto justify-items-center">
                     <div className="flex flex-col justify-around border-black border-2 rounded-xl p-2  items-center">
                         <img src="/orzeska90.png" alt="Zdjęcie sklepu" className=" w-96 h-96 object-cover object-left rounded-xl" />
                         <h1 className="font-semibold">Ornontowice, ul. Orzeska 90 <br />
