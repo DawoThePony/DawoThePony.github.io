@@ -1,29 +1,31 @@
-const linkStyle = 'px-4 text-center'
+import { MdStar , MdFacebook } from "react-icons/md";
+import { AiFillInstagram } from "react-icons/ai";
+import { PiPlantFill } from "react-icons/pi";
+import { RiFilePaper2Fill } from "react-icons/ri";
+
 
 const Link = ({destination, style, name}) => <a href={destination} className={style}>{name}</a>
 
 function App() {
-    return ( <> <div className=" bg-[#ffeddf] md:block lg:block sm:hidden ssm:hidden">
+    return ( <> <div  className=" bg-[#ffeddf] md:block lg:block sm:hidden ssm:hidden">
             {/*************** Nav Section *****************/}
-            <div
-                className=" z-50 w-screen fixed flex items-center justify-evenly text-black py-2 px-5 border-b-2 border-black backdrop-blur-lg">
-                {/* Desktop Nav */}
+            <div className=" z-50 w-screen fixed flex items-center justify-between text-black py-2 px-20 border-b-[1px] border-black backdrop-blur-lg bg-[#ffeddf] bg-opacity-50">
+            {/* Desktop Nav */}
                 <div className="flex items-center justify-start w-full">
-                    <a href="#" className={linkStyle}>Piekarnia Cukiernia
+                    <a href="#" className="px-5 pr-10 flex items-center text-center">
+                        <img src="/logo_czarne.png" alt="Logo" className="w-20 mr-5 "/>
+                        Piekarnia Cukiernia
                         <br/>
                         Tomasz Barański</a>
-                    <Link destination={'#About'} style={linkStyle} name={'O nas'}/>
-                    <Link destination={'#Products'} style={linkStyle} name={'Oferta'}/>
-                    <Link destination={'#Shops'} style={linkStyle} name={'Sklepy'}/>
-                    <Link destination={'#Contact'} style={linkStyle} name={'Kontakt'}/>
+                    <a href="#About" className="px-5">O Nas</a>
+                    <a href="#Products" className="px-5">Oferta</a>
+                    <a href="#Shops" className="px-5">Sklepy</a>
+                    <a href="#Contact" className="px-5">Kontakt</a>
+
                 </div>
                 <div className=" flex justify-between">
-                    <a
-                        href="#"
-                        className='border-black border-2 px-2 mx-3 w-max hover:cursor-pointer'>Znajdź nas</a>
-                    <a
-                        href="#"
-                        className='border-black border-2 px-2 mx-3 bg-black text-white hover:cursor-pointer'>Kontakt</a>
+                    <a href="#Shops" className='border-black border-2 px-2 mx-3 w-max hover:cursor-pointer rounded-lg p-1'>Znajdź nas</a>
+                    <a href="#Contact"className='border-black border-2 px-2 mx-3 bg-black text-white hover:cursor-pointer rounded-lg p-1'>Kontakt</a>
                 </div>
             </div>
             {/*************** Hero Section *****************/}
@@ -47,9 +49,9 @@ function App() {
                 {/* Right side */}
                 <div className=" w-[50%] h-screen">
                     <img
-                        src="https://placehold.co/2000"
+                        src="/hero_bg.png"
                         alt="placeholder"
-                        className=" object-cover h-screen"/>
+                        className=" object-cover  w-full h-full"/>
                 </div>
             </div>
             {/*************** About Section *****************/}
@@ -68,19 +70,19 @@ function App() {
                     {/* gallery */}
                     <div className="flex flex-row justify-between">
                         <div className=" flex flex-col w-[30%] items-center">
-                            <img src="https://placehold.co/600x400" alt="" className=" m-5"/>
+                            <img src="/about1.jpg" alt="" className=" m-5 rounded-3xl w-96 h-96 object-cover"/>
                             <h2 className="text-2xl font-semibold p-2">Świeże i Lokalne Składniki</h2>
                             <p className=" font-light">Wszystkie nasze produkty są przygotowywane z
                                 najświeższych i lokalnych składników, aby zapewnić najwyższą jakość.</p>
                         </div>
                         <div className="  flex flex-col w-[30%] items-center">
-                            <img src="https://placehold.co/600x400" alt="" className=" m-5"/>
+                            <img src="/about2.jpg" alt="" className=" m-5 rounded-3xl w-96 h-96 object-cover"/>
                             <h2 className="text-2xl p-2 font-bold">Specjalne Zamówienia na Wszelkie Okazje</h2>
                             <p>Oferujemy również specjalne zamówienia na torty i ciasta na różne okazje,
                                 takie jak wesela i urodziny.</p>
                         </div>
                         <div className="  flex flex-col w-[30%] items-center">
-                            <img src="https://placehold.co/600x400" alt="" className=" m-5"/>
+                            <img src="/about3.jpg" alt="" className=" m-5 rounded-3xl w-96 h-96 object-cover" />
                             <h2 className="text-2xl p-2 font-bold">Nasza Misja - Zadowoleni Klienci</h2>
                             <p>Naszą misją jest zapewnienie naszym klientom wyjątkowych doświadczeń
                                 smakowych i pełnej satysfakcji.</p>
@@ -99,14 +101,14 @@ function App() {
                 {/* Second Section */}
                 <div className="flex">
                     {/* Left side */}
-                    <div className=" w-[50%] h-screen p-40">
+                    <div className=" w-[50%] min-h-screen p-40 flex-col content-center">
                         <img
-                            src="https://placehold.co/1000"
+                            src="/about4.jpg"
                             alt="placeholder"
-                            className=" object-cover h-max"/>
+                            className=" object-cover h-5/6 rounded-3xl"/>
                     </div>
                     {/* Right side */}
-                    <div className="flex flex-col w-1/2 p-20 justify-center h-screen">
+                    <div className="flex flex-col w-1/2 p-20 justify-center min-h-screen">
                         <h1 className=" text-5xl m-5 font-bold">Nasza pasja to tworzenie wyjątkowych wypieków</h1>
                         <p className="m-5 text-xl font-light">Jesteśmy lokalną piekarnią, która od lat
                             dostarcza świeże pieczywo i wypieki na specjalne okazje. Nasza misja to
@@ -132,32 +134,38 @@ function App() {
                 <h1 className=" text-5xl font-bold p-5">Opinie klientów</h1>
                 <p className="p-5">Nasze produkty są wyjątkowe i zawsze świeże.</p>
               </div>
-              <div className="flex justify-around h-1/2">
-                <div className=" h-3/4 flex flex-col">
+              <div className="flex justify-between h-1/2">
+                <div className=" h-3/4 w-1/3 flex flex-col">
                   <img src="https://placehold.co/20" alt="" className=" w-16 rounded-full"/>
-                  <h5 className=" text-lg font-semibold pt-5">Anna Kowalska</h5>
-                  <h4 className=" text-xl font-bold p-5">"Najlepsza piekarnia w okolicy! Ich chleb jest pyszny."</h4>
-                  <img src="https://placehold.co/150x30" alt="" className="w-40" />
+                  <h5 className=" text-lg font-semibold pt-5">Patrycja U.</h5>
+                  <h4 className=" text-xl font-bold p-5">"Serdecznie polecam ☺ najlepsze torty, ciasta, itp. Zawsze wszystko pięknie udekorowane ^^ A smak? Obłędny ❤ Polecam ☺"</h4>
+                  <div className="flex text-4xl">
+                    <MdStar /><MdStar /><MdStar /><MdStar /><MdStar />
+                  </div>
                 </div>
-                <div className=" h-3/4 flex flex-col">
+                <div className=" h-3/4  w-1/3 flex flex-col">
                   <img src="https://placehold.co/20" alt="" className=" w-16 rounded-full"/>
-                  <h5 className=" text-lg font-semibold pt-5">Jan Nowak</h5>
-                  <h4 className=" text-xl font-bold p-5">"Zamówiłam u nich tort na urodziny mojego syna i był przepyszny!"</h4>
-                  <img src="https://placehold.co/150x30" alt="" className="w-40" />
+                  <h5 className=" text-lg font-semibold pt-5">Monika D.</h5>
+                  <h4 className=" text-xl font-bold p-5">"Bardzo dziękujemy za przepyszny tort Oreo ! Byl bardzo smaczny i cudowny, córka zachwycona, jak zawsze !! polecam serdecznie!! 🍰"</h4>
+                  <div className="flex text-4xl">
+                    <MdStar /><MdStar /><MdStar /><MdStar /><MdStar />
+                  </div>                
                 </div>
-                <div className=" h-3/4 flex flex-col">
+                <div className="w-1/3 flex flex-col">
                   <img src="https://placehold.co/20" alt="" className=" w-16 rounded-full"/>
-                  <h5 className=" text-lg font-semibold pt-5">Marta Wiśniewska</h5>
-                  <h4 className=" text-xl font-bold p-5">"Bardzo polecam ich wyroby. Zawsze są świeże i smaczne."</h4>
-                  <img src="https://placehold.co/150x30" alt="" className="w-40" />
+                  <h5 className=" text-lg font-semibold pt-5">Marta W.</h5>
+                  <h4 className=" text-xl font-bold p-5">"Bardzo smaczne ciasta i desery !!!!😀😀😀"</h4>
+                  <div className="flex text-4xl">
+                     <MdStar /><MdStar /><MdStar /><MdStar /><MdStar />
+                  </div>
                 </div>
                 
               </div>
             </div>
             {/*************** Products Section *****************/}
-            <div id="Products"  className="flex h-screen">
+            <div id="Products"  className="flex  p-20">
                     {/* Left side */}
-                    <div className="flex flex-col w-1/2 p-20 justify-center h-screen">
+                    <div className="flex flex-col w-1/2 justify-center min-h-screen mx-auto">
                         <h1 className=" text-5xl m-5 font-bold">Nasze produkty - zdrowe składniki, tradycyjne receptury, zamówienia specjalne</h1>
                         <p className="m-5 text-xl font-light">Nasza piekarnia oferuje szeroki wybór
                             pysznych i świeżo upieczonych produktów. Stawiamy na zdrowe składniki,
@@ -165,12 +173,12 @@ function App() {
                             okazje.</p>
                         <div className="flex m-5">
                             <div className="flex flex-col">
-                              <img src="https://placehold.co/10" alt="" className="w-10"/>
+                            <PiPlantFill className=" text-3xl"/>
                               <h3 className=" text-xl font-semibold">Zdrowe składniki</h3>
                               <p>Nasze produkty są przygotowywane z najwyższej jakości składników, dbając o zdrowie naszych klientów.</p>
                             </div>
                             <div className="flex flex-col">
-                              <img src="https://placehold.co/10" alt="" className="w-10"/>
+                            <RiFilePaper2Fill className=" text-3xl"/>
                               <h3 className=" text-xl font-semibold">Tradycyjne receptury</h3>
                               <p>Korzystamy z tradycyjnych receptur, które gwarantują wyjątkowy smak i aromat naszych wyrobów..</p>
                             </div>
@@ -178,7 +186,7 @@ function App() {
                         </div>
                     </div>
                     {/* Right side */}
-                    <div className=" grid grid-cols-2 grid p-40 row m-auto gap-5 justify-items-center ">
+                    <div className=" grid grid-cols-2 grid row m-auto gap-5 justify-items-center ">
                             <div className=" w-full h-full">
                               <img
                               src="https://placehold.co/200"
@@ -199,6 +207,86 @@ function App() {
                             </div>
 
                     </div>
+            </div>
+            {/* ************** Shops Section **************** */}
+            <div id="Shops" className=" pt-32 flex flex-col justify-between text-center">
+                <h1 className=" text-5xl mb-10">Nasze sklepy</h1>
+                <div className="flex justify-center gap-5 text-2xl">
+                    <div className="flex border-2 border-black p-2 px-5 font-bold items-center rounded-xl"><p>Galeria</p></div>
+                    <div className=" bg-black text-white p-2 px-5 font-bold rounded-xl">Mapa</div>
+                </div>
+                <div className="p-20 grid lg:grid-cols-3 md:grid-cols-2 sm: grid-cols-1  gap-20 mx-auto justify-items-center">
+                    <div className="flex flex-col justify-around border-black border-2 rounded-xl p-2  items-center">
+                        <img src="/orzeska90.png" alt="Zdjęcie sklepu" className=" w-96 h-96 object-cover object-left" />
+                        <h1 className="">Ornontowice, ul. Orzeska 90 <br />
+                        <a href="tel:322354642">tel. 32 235 46 42</a>
+                        </h1>
+                    </div>
+                    <div className="flex flex-col justify-around border-black border-2 rounded-xl p-2  items-center">
+                        <img src="/morcinka4.jpg" alt="Zdjęcie sklepu" className=" w-96 h-96 object-cover" />
+                        <h1 className="">Leszczyny, ul. Morcinka 4 <br />
+                        <a href="tel:881947197">tel. 881 947 197</a>
+                        </h1>
+                    </div>
+                    <div className="flex flex-col justify-around border-black border-2 rounded-xl p-2  items-center">
+                        <img src="/pojdy81.jpg" alt="Zdjęcie sklepu" className=" w-96 h-96 object-cover" />
+                        <h1 className="">Leszczyny, ul. Ks. Pojdy 81 <br />
+                        <a href="tel:504859688">tel. 504 859 688</a>
+                        </h1>
+                    </div>
+                    <div className="flex flex-col justify-around border-black border-2 rounded-xl p-2  items-center">
+                        <img src="/kochanowskiego42.jpg" alt="Zdjęcie sklepu" className=" w-96 h-96 object-cover" />
+                        <h1 className="">Czuchów, ul. Kochanowskiego 42 <br />
+                        <a href="tel:512111610">tel. 512 111 610</a>
+                        </h1>
+                    </div>
+                    <div className="flex flex-col justify-around border-black border-2 rounded-xl p-2  items-center">
+                        <img src="/rynek7.jpg" alt="Zdjęcie sklepu" className=" w-96 h-96 object-cover" />
+                        <h1 className="">Czerwionka, ul. Rynek 7 <br />
+                        <a href="tel:512967611">tel. 512 967 611</a>
+                        </h1>
+                    </div>
+                    <div className="flex flex-col justify-around border-black border-2 rounded-xl p-2  items-center">
+                        <img src="/brzozowa13.png" alt="Zdjęcie sklepu" className=" w-96 h-96 object-cover object-right" />
+                        <h1 className="">Ornontowice, ul. Brzozowa 13 <br />
+                        <a href="tel:">tel. n/a</a>
+                        </h1>
+                    </div>
+
+                </div>
+            </div>
+            {/* ************** Contact Section **************** */}
+            <div id="Contact">
+
+            </div>
+            {/*************** Footer Section *****************/}
+            <div id="footer" className=" flex flex-col justify-between p-20">
+                <div className=" flex justify-between">
+                    <img src="" alt="Logo" />
+                    <div>
+                        <a href="#" className=" font-bold px-10">Hero</a>
+                        <a href="#" className=" font-bold px-10">O Nas</a>
+                        <a href="#" className=" font-bold px-10">Oferta</a>
+                        <a href="#" className=" font-bold px-10">Sklepy</a>
+                        <a href="#" className=" font-bold px-10">Kontakt</a>
+                    </div>
+                    <div className="flex text-3xl">
+                        <a href="#" className="px-2"><MdFacebook /> </a>
+                        <a href="#" className="px-2"><AiFillInstagram /></a>
+                    </div>
+                </div>
+                <div className=" flex justify-around border-t-2 border-black p-5 m-10">
+                    <p>© 2024 Piekarnia Cukiernia Tomasz Barański. Wszelkie prawa zastrzeżone.
+                        <a href="#" className=" underline px-5">Polityka prywatności</a> 
+                        <a href="#" className=" underline px-5">Warunki korzystania</a> 
+                        <a href="#" className=" underline px-5">Ustawienia plików cookie</a>
+                    </p>
+                    <p className=" font-light italic">
+                        <a href="https://dawothepony.github.io">
+                        Designed & developed by Dawid Wojtkowski & Agnieszka Miler
+                        </a>
+                    </p>
+                </div>
             </div>
 
         </div>
