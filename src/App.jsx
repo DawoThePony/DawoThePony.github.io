@@ -10,10 +10,10 @@ const Link = ({destination, style, name}) => <a href={destination} className={st
 function App() {
     return ( <> <div  className=" bg-[#fafafa]">
             {/*************** Nav Section *****************/}
-            <div className="ssm:h-20 md:h-auto md:flex z-50 w-screen fixed flex items-center justify-between text-black py-2 md:px-20 border-b-[1px] border-black backdrop-blur-lg bg-[#fafafa] bg-opacity-50 text-nowrap">
+            <div className="ssm:h-12 md:h-auto md:flex z-50 w-screen fixed flex items-center justify-between text-black py-2 md:px-20 border-b-[1px] border-black backdrop-blur-lg bg-[#fafafa] bg-opacity-50 text-nowrap">
                 <div className="md:flex items-center md:justify-start md:w-full">
                     <a href="#" className="px-5 pr-10 md:flex items-center text-center">
-                        <img src="/logo_czarne.png" alt="Logo" className="ssm:h-16 ssm:ml-5 md:m-0 md:h-20 md:mr-10"/>
+                        <img src="/logo_czarne.png" alt="Logo" className="ssm:h-10 ssm:ml-5 md:m-0 md:h-20 md:mr-10"/>
                         <p className="ssm:hidden md:flex">Piekarnia Cukiernia<br/>Tomasz Barański</p>
                     </a>
                     <div className="ssm:hidden md:flex">
