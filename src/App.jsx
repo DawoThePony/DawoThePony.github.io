@@ -2,23 +2,20 @@ const linkStyle = 'px-4 text-center'
 
 const Link = ({destination, style, name}) => <a href={destination} className={style}>{name}</a>
 
-
 function App() {
-    return ( <> 
-    <div className=" bg-[#fff3ea] md:block lg:block sm:hidden ssm:hidden">
-{/*************** Nav Section *****************/}
-{/* Desktop Nav */}
+    return ( <> <div className=" bg-[#ffeddf] md:block lg:block sm:hidden ssm:hidden">
+            {/*************** Nav Section *****************/}
             <div
                 className=" z-50 w-screen fixed flex items-center justify-evenly text-black py-2 px-5 border-b-2 border-black backdrop-blur-lg">
+                {/* Desktop Nav */}
                 <div className="flex items-center justify-start w-full">
-
                     <a href="#" className={linkStyle}>Piekarnia Cukiernia
                         <br/>
                         Tomasz Barański</a>
-                    <Link destination={''} style={linkStyle} name={'O nas'}/>
-                    <Link destination={''} style={linkStyle} name={'Oferta'}/>
-                    <Link destination={''} style={linkStyle} name={'Sklepy'}/>
-                    <Link destination={''} style={linkStyle} name={'Kontakt'}/>
+                    <Link destination={'#About'} style={linkStyle} name={'O nas'}/>
+                    <Link destination={'#Products'} style={linkStyle} name={'Oferta'}/>
+                    <Link destination={'#Shops'} style={linkStyle} name={'Sklepy'}/>
+                    <Link destination={'#Contact'} style={linkStyle} name={'Kontakt'}/>
                 </div>
                 <div className=" flex justify-between">
                     <a
@@ -29,7 +26,7 @@ function App() {
                         className='border-black border-2 px-2 mx-3 bg-black text-white hover:cursor-pointer'>Kontakt</a>
                 </div>
             </div>
-{/*************** Hero Section *****************/}
+            {/*************** Hero Section *****************/}
             <div className="flex">
                 {/* Left side */}
                 <div className="flex flex-col w-1/2 p-20 justify-center h-screen">
@@ -55,87 +52,161 @@ function App() {
                         className=" object-cover h-screen"/>
                 </div>
             </div>
-{/*************** About Section *****************/}
-            <div>
-            {/* First Section */}
-              <div
-                  className="flex flex-col w-3/4 items-center mx-auto py-20 text-center justify-between min-h-screen">
-                  <div className=" flex flex-col items-center">
-                      <h1 className=" text-5xl m-5 font-bold">Nasza Piekarnia - Świeże i Smaczne Produkty</h1>
-                      <p className="w-1/2 m-5">
-                          Nasza piekarnia oferuje najświeższe produkty w mieście. Stawiamy na lokalne
-                          składniki i specjalne zamówienia, aby zapewnić naszym klientom wyjątkowe
-                          doświadczenie.
-                      </p>
-                  </div>
-                  {/* gallery */}
-                  <div className="flex flex-row justify-between">
-                      <div className=" flex flex-col w-[30%] items-center">
-                          <img src="https://placehold.co/600x400" alt="" className=" m-5"/>
-                          <h2 className="text-2xl font-semibold p-2">Świeże i Lokalne Składniki</h2>
-                          <p className=" font-light">Wszystkie nasze produkty są przygotowywane z
-                              najświeższych i lokalnych składników, aby zapewnić najwyższą jakość.</p>
-                      </div>
-                      <div className="  flex flex-col w-[30%] items-center">
-                          <img src="https://placehold.co/600x400" alt="" className=" m-5"/>
-                          <h2 className="text-2xl p-2 font-bold">Specjalne Zamówienia na Wszelkie Okazje</h2>
-                          <p>Oferujemy również specjalne zamówienia na torty i ciasta na różne okazje,
-                              takie jak wesela i urodziny.</p>
-                      </div>
-                      <div className="  flex flex-col w-[30%] items-center">
-                          <img src="https://placehold.co/600x400" alt="" className=" m-5"/>
-                          <h2 className="text-2xl p-2 font-bold">Nasza Misja - Zadowoleni Klienci</h2>
-                          <p>Naszą misją jest zapewnienie naszym klientom wyjątkowych doświadczeń
-                              smakowych i pełnej satysfakcji.</p>
-                      </div>
-                  </div>
-                  {/* CTA Buttons */}
-                  <div className=" m-10">
-                      <a
-                          href="#"
-                          className='border-black border-2 px-2 mx-3 text-nowrap hover:cursor-pointer h-min w-min rounded-lg text-2xl p-1'>Znajdź nas</a>
-                      <a
-                          href="#"
-                          className='border-black border-2 px-2 mx-3 bg-black text-white hover:cursor-pointer h-min w-min rounded-lg text-2xl p-1'>Kontakt</a>
-                  </div>
+            {/*************** About Section *****************/}
+            <div id="About">
+                {/* First Section */}
+                <div
+                    className="flex flex-col w-3/4 items-center mx-auto py-20 text-center justify-between min-h-screen">
+                    <div className=" flex flex-col items-center">
+                        <h1 className=" text-5xl m-5 font-bold">Nasza Piekarnia - Świeże i Smaczne Produkty</h1>
+                        <p className="w-1/2 m-5">
+                            Nasza piekarnia oferuje najświeższe produkty w mieście. Stawiamy na lokalne
+                            składniki i specjalne zamówienia, aby zapewnić naszym klientom wyjątkowe
+                            doświadczenie.
+                        </p>
+                    </div>
+                    {/* gallery */}
+                    <div className="flex flex-row justify-between">
+                        <div className=" flex flex-col w-[30%] items-center">
+                            <img src="https://placehold.co/600x400" alt="" className=" m-5"/>
+                            <h2 className="text-2xl font-semibold p-2">Świeże i Lokalne Składniki</h2>
+                            <p className=" font-light">Wszystkie nasze produkty są przygotowywane z
+                                najświeższych i lokalnych składników, aby zapewnić najwyższą jakość.</p>
+                        </div>
+                        <div className="  flex flex-col w-[30%] items-center">
+                            <img src="https://placehold.co/600x400" alt="" className=" m-5"/>
+                            <h2 className="text-2xl p-2 font-bold">Specjalne Zamówienia na Wszelkie Okazje</h2>
+                            <p>Oferujemy również specjalne zamówienia na torty i ciasta na różne okazje,
+                                takie jak wesela i urodziny.</p>
+                        </div>
+                        <div className="  flex flex-col w-[30%] items-center">
+                            <img src="https://placehold.co/600x400" alt="" className=" m-5"/>
+                            <h2 className="text-2xl p-2 font-bold">Nasza Misja - Zadowoleni Klienci</h2>
+                            <p>Naszą misją jest zapewnienie naszym klientom wyjątkowych doświadczeń
+                                smakowych i pełnej satysfakcji.</p>
+                        </div>
+                    </div>
+                    {/* CTA Buttons */}
+                    <div className=" m-10">
+                        <a
+                            href="#"
+                            className='border-black border-2 px-2 mx-3 text-nowrap hover:cursor-pointer h-min w-min rounded-lg text-2xl p-1'>Znajdź nas</a>
+                        <a
+                            href="#"
+                            className='border-black border-2 px-2 mx-3 bg-black text-white hover:cursor-pointer h-min w-min rounded-lg text-2xl p-1'>Kontakt</a>
+                    </div>
+                </div>
+                {/* Second Section */}
+                <div className="flex">
+                    {/* Left side */}
+                    <div className=" w-[50%] h-screen p-40">
+                        <img
+                            src="https://placehold.co/1000"
+                            alt="placeholder"
+                            className=" object-cover h-max"/>
+                    </div>
+                    {/* Right side */}
+                    <div className="flex flex-col w-1/2 p-20 justify-center h-screen">
+                        <h1 className=" text-5xl m-5 font-bold">Nasza pasja to tworzenie wyjątkowych wypieków</h1>
+                        <p className="m-5 text-xl font-light">Jesteśmy lokalną piekarnią, która od lat
+                            dostarcza świeże pieczywo i wypieki na specjalne okazje. Nasza misja to
+                            zaspokajanie Twoich potrzeb smakowych i tworzenie niezapomnianych doświadczeń
+                            kulinarnych. Wierzymy w jakość, tradycję i pasję, które kładziemy w każdy nasz
+                            wypiek. Nasz zespół pracowników to grupa utalentowanych i doświadczonych
+                            piekarzy, którzy dbają o to, aby każdy produkt był doskonały.</p>
+                        {/* CTA buttons */}
+                        <div className="flex m-5">
+                            <a
+                                href="#"
+                                className='border-black border-2 px-2 mx-3 text-nowrap hover:cursor-pointer h-min w-min rounded-lg text-2xl p-1'>Znajdź nas</a>
+                            <a
+                                href="#"
+                                className='border-black border-2 px-2 mx-3 bg-black text-white hover:cursor-pointer h-min w-min rounded-lg text-2xl p-1'>Kontakt</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {/*************** Testimonial Section *****************/}
+            <div id="Testimonials" className="flex flex-col px-20 justify-around">
+              <div className=" mb-20">
+                <h1 className=" text-5xl font-bold p-5">Opinie klientów</h1>
+                <p className="p-5">Nasze produkty są wyjątkowe i zawsze świeże.</p>
               </div>
-              {/* Second Section */}
-              <div className="flex">
-                  {/* Left side */}
-                  <div className=" w-[50%] h-screen p-40">
-                      <img
-                          src="https://placehold.co/1000"
-                          alt="placeholder"
-                          className=" object-cover h-max"/>
-                  </div>
-                  {/* Right side */}
-                  <div className="flex flex-col w-1/2 p-20 justify-center h-screen">
-                      <h1 className=" text-5xl m-5 font-bold">Nasza pasja to tworzenie wyjątkowych wypieków</h1>
-                      <p className="m-5 text-xl font-light">Jesteśmy lokalną piekarnią, która od lat
-                          dostarcza świeże pieczywo i wypieki na specjalne okazje. Nasza misja to
-                          zaspokajanie Twoich potrzeb smakowych i tworzenie niezapomnianych doświadczeń
-                          kulinarnych. Wierzymy w jakość, tradycję i pasję, które kładziemy w każdy nasz
-                          wypiek. Nasz zespół pracowników to grupa utalentowanych i doświadczonych
-                          piekarzy, którzy dbają o to, aby każdy produkt był doskonały..</p>
-                      {/* CTA buttons */}
-                      <div className="flex m-5">
-                          <a
-                              href="#"
-                              className='border-black border-2 px-2 mx-3 text-nowrap hover:cursor-pointer h-min w-min rounded-lg text-2xl p-1'>Znajdź nas</a>
-                          <a
-                              href="#"
-                              className='border-black border-2 px-2 mx-3 bg-black text-white hover:cursor-pointer h-min w-min rounded-lg text-2xl p-1'>Kontakt</a>
-                      </div>
-                  </div>
+              <div className="flex justify-around h-1/2">
+                <div className=" h-3/4 flex flex-col">
+                  <img src="https://placehold.co/20" alt="" className=" w-16 rounded-full"/>
+                  <h5 className=" text-lg font-semibold pt-5">Anna Kowalska</h5>
+                  <h4 className=" text-xl font-bold p-5">"Najlepsza piekarnia w okolicy! Ich chleb jest pyszny."</h4>
+                  <img src="https://placehold.co/150x30" alt="" className="w-40" />
+                </div>
+                <div className=" h-3/4 flex flex-col">
+                  <img src="https://placehold.co/20" alt="" className=" w-16 rounded-full"/>
+                  <h5 className=" text-lg font-semibold pt-5">Jan Nowak</h5>
+                  <h4 className=" text-xl font-bold p-5">"Zamówiłam u nich tort na urodziny mojego syna i był przepyszny!"</h4>
+                  <img src="https://placehold.co/150x30" alt="" className="w-40" />
+                </div>
+                <div className=" h-3/4 flex flex-col">
+                  <img src="https://placehold.co/20" alt="" className=" w-16 rounded-full"/>
+                  <h5 className=" text-lg font-semibold pt-5">Marta Wiśniewska</h5>
+                  <h4 className=" text-xl font-bold p-5">"Bardzo polecam ich wyroby. Zawsze są świeże i smaczne."</h4>
+                  <img src="https://placehold.co/150x30" alt="" className="w-40" />
+                </div>
+                
               </div>
             </div>
-      </div>
+            {/*************** Products Section *****************/}
+            <div id="Products"  className="flex h-screen">
+                    {/* Left side */}
+                    <div className="flex flex-col w-1/2 p-20 justify-center h-screen">
+                        <h1 className=" text-5xl m-5 font-bold">Nasze produkty - zdrowe składniki, tradycyjne receptury, zamówienia specjalne</h1>
+                        <p className="m-5 text-xl font-light">Nasza piekarnia oferuje szeroki wybór
+                            pysznych i świeżo upieczonych produktów. Stawiamy na zdrowe składniki,
+                            tradycyjne receptury i możliwość zamówienia specjalnych wypieków na różne
+                            okazje.</p>
+                        <div className="flex m-5">
+                            <div className="flex flex-col">
+                              <img src="https://placehold.co/10" alt="" className="w-10"/>
+                              <h3 className=" text-xl font-semibold">Zdrowe składniki</h3>
+                              <p>Nasze produkty są przygotowywane z najwyższej jakości składników, dbając o zdrowie naszych klientów.</p>
+                            </div>
+                            <div className="flex flex-col">
+                              <img src="https://placehold.co/10" alt="" className="w-10"/>
+                              <h3 className=" text-xl font-semibold">Tradycyjne receptury</h3>
+                              <p>Korzystamy z tradycyjnych receptur, które gwarantują wyjątkowy smak i aromat naszych wyrobów..</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    {/* Right side */}
+                    <div className=" grid grid-cols-2 grid p-40 row m-auto gap-5 justify-items-center ">
+                            <div className=" w-full h-full">
+                              <img
+                              src="https://placehold.co/200"
+                              alt="placeholder"
+                              className=" object-cover w-full rounded-lg"/>
+                            </div>
+                            <div className=" w-full h-full">
+                              <img
+                              src="https://placehold.co/200"
+                              alt="placeholder"
+                              className=" object-cover w-full rounded-lg"/>
+                            </div>
+                            <div className=" col-span-2 w-full h-full"> 
+                              <img
+                              src="https://placehold.co/500x200"
+                              alt="placeholder"
+                              className=" object-cover w-full rounded-lg"/>
+                            </div>
 
-{/*************** Mobile View *****************/
-    } <div className=" sm:flex ssm:flex md:hidden lg:hidden h-screen w-screen items-center justify-center text-5xl" > <p>
+                    </div>
+            </div>
+
+        </div>
+        {/*************** Mobile View *****************/} 
+        < div className = " sm:flex ssm:flex md:hidden lg:hidden h-screen w-screen items-center justify-center text-5xl" > <p>
                 Mobile coming soon!
             </p> </div>
-    </>)
+    </ >)
 }
 
 export default App
