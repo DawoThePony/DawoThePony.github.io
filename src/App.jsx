@@ -204,10 +204,10 @@ Pani/Pana dane będą przetwarzane w sposób zautomatyzowany w tym również w f
                     <a href="#Contact"className='border-black border-2 px-2 mx-3 bg-black text-white hover:cursor-pointer rounded-lg p-1'>Kontakt</a>
                 </div>
                 <div className={"md:hidden flex-col text-left " + (menu ? 'ssm:flex':'ssm:hidden')}>
-                        <a href="#About" className="p-5 w-full rounded-2xl bg-opacity-50 m-2 mx-5">O Nas</a>
-                        <a href="#Products" className="p-5 w-full rounded-2xl bg-opacity-50 m-2 mx-5">Oferta</a>
-                        <a href="#Shops" className="p-5 w-full rounded-2xl bg-opacity-50 m-2 mx-5">Sklepy</a>
-                        <a href="#Contact" className="p-5 w-full rounded-2xl bg-opacity-50 m-2 mx-5">Kontakt</a>
+                        <a href="#About" onClick={toggleMenu} className="p-5 w-full rounded-2xl bg-opacity-50 m-2 mx-5">O Nas</a>
+                        <a href="#Products" onClick={toggleMenu} className="p-5 w-full rounded-2xl bg-opacity-50 m-2 mx-5">Oferta</a>
+                        <a href="#Shops" onClick={toggleMenu} className="p-5 w-full rounded-2xl bg-opacity-50 m-2 mx-5">Sklepy</a>
+                        <a href="#Contact" onClick={toggleMenu} className="p-5 w-full rounded-2xl bg-opacity-50 m-2 mx-5">Kontakt</a>
                 </div>
             </div>
             {/*************** Hero Section *****************/}
