@@ -24,7 +24,7 @@ function App() {
     const toggleMenu = () => {
         setMenu(!menu);
     }
-    const [polityka, setPolityka] = useState(false);
+    const [polityka, setPolityka] = useState(true);
 
     const togglePolityka = () => {
         setPolityka(!polityka);
