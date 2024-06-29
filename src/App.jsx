@@ -34,7 +34,7 @@ function App() {
     
             {/*************** Polityka Section *****************/}
             <div id="Polityka" className={"w-screen h-screen mx-auto z-40 flex flex-col justify-center backdrop-blur-md " + (polityka ? 'hidden':'fixed')}>
-                <div className=" mt-10 p-5 w-[90vw] h-[90vh] mx-auto text-justify bg-white border-black border-2 overflow-scroll">
+                <div className=" mt-10 p-5 w-[90vw] h-[90vh] mx-auto text-justify bg-white border-black border-2 overflow-x-hidden overflow-scroll">
                     <div  className="flex w-full justify-end">
                         <CgClose onClick={togglePolityka} className=" text-2xl border-2 border-black rounded-full hover:cursor-pointer"/>
                     </div>
@@ -186,13 +186,13 @@ Pani/Pana dane będą przetwarzane w sposób zautomatyzowany w tym również w f
                     <div className="items-center">
                         <a href="#" className="md:px-5 md:pr-10 md:flex items-center text-center">
                             <img src="/logo_czarne.png" alt="Logo" className="ssm:h-10 ssm:ml-5 md:m-0 md:h-20 md:mr-10"/>
-                            <h1  className="ssm:hidden md:flex text-xl">Piekarnia Cukiernia<br/>Tomasz Barański</h1>
+                            <h1  className="ssm:hidden md:flex text-2xl">Piekarnia Cukiernia<br/>Tomasz Barański</h1>
                         </a>
                     </div>
                     <div className="ssm:flex justify-end md:hidden">
                         <GiHamburgerMenu onClick={toggleMenu} className=" text-3xl mx-10 my-2 hover:cursor-pointer"/>
                     </div>
-                    <div className="md:flex md:flex-row items-cent ssm:hidden">
+                    <div className="md:flex md:flex-row items-cent ssm:hidden [&_a]:text-lg ">
                         <a href="#About" className="ssm:px-10 ssm:py-5 ssm:w-full md:px-5">O Nas</a>
                         <a href="#Products" className="ssm:px-10 ssm:py-5 ssm:w-full md:px-5">Oferta</a>
                         <a href="#Shops" className="ssm:px-10 ssm:py-5 ssm:w-full md:px-5">Sklepy</a>
@@ -256,19 +256,19 @@ Pani/Pana dane będą przetwarzane w sposób zautomatyzowany w tym również w f
                         <div className=" flex flex-col ssm:w-full md:w-[30%] items-center">
                             <img src="/about1.jpg" alt="" className=" m-5 rounded-3xl w-96 h-96 object-cover"/>
                             <h2 className="text-2xl font-semibold p-2">Świeże i Lokalne Składniki</h2>
-                            <p className=" font-light">Wszystkie nasze produkty są przygotowywane z
+                            <p className="text-lg">Wszystkie nasze produkty są przygotowywane z
                                 najświeższych i lokalnych składników, aby zapewnić najwyższą jakość.</p>
                         </div>
                         <div className="  flex flex-col ssm:w-full md:w-[30%] items-center">
                             <img src="/about2.jpg" alt="" className=" m-5 rounded-3xl w-96 h-96 object-cover"/>
                             <h2 className="text-2xl p-2 font-bold">Specjalne Zamówienia na Wszelkie Okazje</h2>
-                            <p>Oferujemy również specjalne zamówienia na torty i ciasta na różne okazje,
+                            <p className="text-lg">Oferujemy również specjalne zamówienia na torty i ciasta na różne okazje,
                                 takie jak wesela i urodziny.</p>
                         </div>
                         <div className="  flex flex-col ssm:w-full md:w-[30%] items-center">
                             <img src="/about3.jpg" alt="" className=" m-5 rounded-3xl w-96 h-96 object-cover" />
                             <h2 className="text-2xl p-2 font-bold">Nasza Misja - Zadowoleni Klienci</h2>
-                            <p>Naszą misją jest zapewnienie naszym klientom wyjątkowych doświadczeń
+                            <p className="text-lg">Naszą misją jest zapewnienie naszym klientom wyjątkowych doświadczeń
                                 smakowych i pełnej satysfakcji.</p>
                         </div>
                     </div>
@@ -312,29 +312,54 @@ Pani/Pana dane będą przetwarzane w sposób zautomatyzowany w tym również w f
                     </div>
                 </div>
             </div>
+            {/*************** Awards Section *****************/}
+            <div className="md:px-20 md:pb-20 flex flex-col items-center"> 
+                <h1 className=" text-5xl font-bold">Orły piekarnictwa</h1>
+                <p className=" py-5 w-2/3 text-center  text-xl">Orły to wyjątkowa nagroda, którą mogą pochwalić się tylko najlepsze firmy, które cechują się profesjonalizmem i zapewniają najwyższą jakość usług. Dołączenie do programu to doskonały sposób na zakomunikowanie innym, że firma jest na najwyższym poziomie. Tutaj najważniejsze są głosy klientów, którzy rekomendują uczestników w Internecie. To oni są siłą napędową tego programu i jedynym w swoim rodzaju jury, który ocenia konkretną firmę.
+                </p>
+                <div class=" ">
+                    <ul x-ref="logos" class="md:flex ssm:grid ssm:grid-cols-3 ssm:[&_li]:p-2 items-center justify-center md:[&_li]:px-8">
+                        <li>
+                            <img src="./gold2019.png" alt="Facebook" />
+                        </li>
+                        <li>
+                            <img src="./gold2020.png" alt="Disney" />
+                        </li>
+                        <li>
+                            <img src="./gold2021.png" alt="Airbnb" />
+                        </li>
+                        <li>
+                            <img src="./gold2022.png" alt="Apple" />
+                        </li>
+                        <li>
+                            <img src="./gold2023.png" alt="Spark" />
+                        </li>
+                    </ul>                
+                </div>
+            </div>
             {/*************** Testimonial Section *****************/}
-            <div id="Testimonials" className="flex flex-col ssm:px-5 md:px-20 justify-around ssm:text-center md:text-left">
+            <div id="Testimonials" className="flex flex-col ssm:px-5 ssm:mt-20 md:mt-0 md:px-20 justify-around ssm:text-center md:text-left">
               <div className=" md:mb-10">
-                <h1 className=" text-5xl font-bold p-5">Opinie klientów</h1>
+                <h1 className=" text-4xl font-bold p-5">Opinie klientów</h1>
               </div>
               <div className="flex ssm:flex-col md:flex-row md:h-1/2">
                 <div className=" h-3/4 md:w-1/3 flex flex-col">
                   <h5 className=" text-lg font-semibold pt-5">Patrycja U.</h5>
-                  <h4 className=" text-xl font-bold p-5">"Serdecznie polecam ☺ najlepsze torty, ciasta, itp. Zawsze wszystko pięknie udekorowane ^^ A smak? Obłędny ❤ Polecam ☺"</h4>
+                  <h4 className=" text-xl p-5">"Serdecznie polecam ☺ najlepsze torty, ciasta, itp. Zawsze wszystko pięknie udekorowane ^^ A smak? Obłędny ❤ Polecam ☺"</h4>
                   <div className="flex text-4xl ssm:mx-auto md:mx-0 text-yellow-500">
                     <MdStar /><MdStar /><MdStar /><MdStar /><MdStar />
                   </div>
                 </div>
                 <div className=" h-3/4  md:w-1/3 flex flex-col">
                   <h5 className=" text-lg font-semibold pt-5">Monika D.</h5>
-                  <h4 className=" text-xl font-bold p-5">"Bardzo dziękujemy za przepyszny tort Oreo ! Byl bardzo smaczny i cudowny, córka zachwycona, jak zawsze !! polecam serdecznie!! 🍰"</h4>
+                  <h4 className=" text-xl p-5">"Bardzo dziękujemy za przepyszny tort Oreo ! Byl bardzo smaczny i cudowny, córka zachwycona, jak zawsze !! polecam serdecznie!! 🍰"</h4>
                   <div className="flex text-4xl ssm:mx-auto md:mx-0 text-yellow-500">
                     <MdStar /><MdStar /><MdStar /><MdStar /><MdStar />
                   </div>                
                 </div>
                 <div className="md:w-1/3 flex flex-col">
                   <h5 className=" text-lg font-semibold pt-5">Marta W.</h5>
-                  <h4 className=" text-xl font-bold p-5">"Bardzo smaczne ciasta i desery !!!!😀😀😀"</h4>
+                  <h4 className=" text-xl p-5">"Bardzo smaczne ciasta i desery !!!!😀😀😀"</h4>
                   <div className="flex text-4xl ssm:mx-auto md:mx-0 text-yellow-500">
                      <MdStar /><MdStar /><MdStar /><MdStar /><MdStar />
                   </div>
@@ -342,11 +367,12 @@ Pani/Pana dane będą przetwarzane w sposób zautomatyzowany w tym również w f
                 
               </div>
             </div>
+            
             {/*************** Products Section *****************/}
-            <div id="Products"  className="flex ssm:flex-col md:flex-row ssm:text-center md:text-left pt-10 md:px-20">
+            <div id="Products"  className="flex ssm:flex-col md:flex-row ssm:text-center md:text-left md:px-20">
                     {/* Left side */}
                     <div className="flex flex-col md:w-1/2 justify-center min-h-screen mx-auto">
-                        <h1 className=" text-5xl m-5 font-bold">Nasze produkty - świeże składniki, tradycyjne receptury, zamówienia specjalne</h1>
+                        <h1 className=" text-5xl m-5 font-bold">Świeże składniki oraz tradycyjne receptury</h1>
                         <p className="m-5 text-xl font-light">Nasza piekarnia oferuje szeroki wybór
                             pysznych i świeżo upieczonych produktów. Stawiamy na zdrowe składniki,
                             tradycyjne receptury i możliwość zamówienia specjalnych wypieków na różne
@@ -354,13 +380,13 @@ Pani/Pana dane będą przetwarzane w sposób zautomatyzowany w tym również w f
                         <div className="flex ssm:flex-col md:flex-row m-5">
                             <div className="flex flex-col m-2">
                             <PiPlantFill className=" text-3xl md:m-2 ssm:mx-auto md:mx-0"/>
-                              <h3 className=" text-xl font-semibold">Świeże składniki</h3>
-                              <p>Nasze produkty są przygotowywane z najwyższej jakości składników, dbając o zdrowie naszych klientów.</p>
+                              <h3 className=" text-xl pb-2 font-semibold">Świeże składniki</h3>
+                              <p className="text-lg">Nasze produkty są przygotowywane z najwyższej jakości składników, dbając o zdrowie naszych klientów.</p>
                             </div>
                             <div className="flex flex-col m-2">
                             <RiFilePaper2Fill className=" text-3xl md:m-2 ssm:mx-auto md:mx-0"/>
-                              <h3 className=" text-xl font-semibold">Tradycyjne receptury</h3>
-                              <p>Korzystamy z tradycyjnych receptur, które gwarantują wyjątkowy smak i aromat naszych wyrobów..</p>
+                              <h3 className=" text-xl pb-2 font-semibold">Tradycyjne receptury</h3>
+                              <p className="text-lg">Korzystamy z tradycyjnych receptur, które gwarantują wyjątkowy smak i aromat naszych wyrobów..</p>
                             </div>
                             
                         </div>
@@ -386,7 +412,7 @@ Pani/Pana dane będą przetwarzane w sposób zautomatyzowany w tym również w f
                         {/*************** Printer Section *****************/}
                 <div id="Printer"  className="flex ssm:flex-col md:flex-row ssm:text-center md:text-left md:px-20 ssm:p-5">
                     {/* Right side */}
-                    <div className=" ssm:w-full md:w-[50%] md:h-screen md:p-20">
+                    <div className=" ssm:w-full md:w-[50%] md:h-[80vh] md:px-20 md:mt-20">
                         <img
                             src="/printer1.jpg"
                             alt="placeholder"
@@ -399,12 +425,12 @@ Pani/Pana dane będą przetwarzane w sposób zautomatyzowany w tym również w f
                         </p>
                         <div className="flex ssm:flex-col md:flex-row m-5">
                             <div className="flex flex-col m-2">
-                              <h3 className=" text-xl font-semibold">Precyzja i szczegółowość</h3>
-                              <p>Umożliwia tworzenie dokładnych i skomplikowanych wzorów, trudnych do osiągnięcia tradycyjnymi metodami..</p>
+                              <h3 className=" pb-2 text-xl font-semibold">Precyzja i szczegółowość</h3>
+                              <p className="text-lg">Umożliwia tworzenie dokładnych i skomplikowanych wzorów, trudnych do osiągnięcia tradycyjnymi metodami..</p>
                             </div>
                             <div className="flex flex-col m-2">
-                              <h3 className=" text-xl font-semibold">Personalizacja</h3>
-                              <p>Pozwala na łatwe dodawanie imion, dedykacji i zdjęć, co tworzy wyjątkowe, spersonalizowane produkty na różne okazje.
+                              <h3 className=" text-xl pb-2 font-semibold">Personalizacja</h3>
+                              <p className="text-lg">Pozwala na łatwe dodawanie imion, dedykacji i zdjęć, co tworzy wyjątkowe, spersonalizowane produkty na różne okazje.
                               </p>
                             </div>
                             
@@ -413,7 +439,7 @@ Pani/Pana dane będą przetwarzane w sposób zautomatyzowany w tym również w f
                 </div>
             {/* ************** Shops Section **************** */}
             <div id="Shops" className="flex flex-col justify-between text-center pt-28">
-                <h1 className=" text-5xl mb-10">Nasze sklepy</h1>
+                <h1 className=" text-5xl mb-10 font-bold">Nasze sklepy</h1>
                 <div className="ssm:hidden md:flex justify-center gap-5 text-2xl">
                     <div onClick={closeMaps} className={"flex border-2 border-black p-2 px-5 font-bold items-center rounded-xl transform duration-500 " + (maps ? 'bg-transparent text-black' : 'text-white bg-black')}><p>Galeria</p></div>
                     <div onClick={openMaps} className={"flex border-2 border-black p-2 px-5 font-bold items-center rounded-xl transform duration-500 " + (maps ? 'bg-black text-white' : 'bg:transparent text-black')}><p>Mapa</p></div>
@@ -421,37 +447,37 @@ Pani/Pana dane będą przetwarzane w sposób zautomatyzowany w tym również w f
                 {/* Galeria */}
                 <div className={"ssm:mt-20 ssm:mx-5 md:mt-0 md:p-20 lg:grid-cols-3 md:grid-cols-2 sm: grid-cols-1 gap-20 mx-auto justify-items-center " + (maps ? 'hidden' : 'grid')}>
                     <div className="flex flex-col justify-around border-black border-2 rounded-xl p-2  items-center">
-                        <img src="/orzeska90.png" alt="Zdjęcie sklepu" className=" w-96 h-96 object-cover object-left rounded-xl" />
+                        <img src="/orzeska90.png" alt="Zdjęcie sklepu" className=" w-96 h-96 object-cover object-left rounded-xl drop-shadow-xl m-2 " />
                         <h1 className="font-semibold">Ornontowice, ul. Orzeska 90 <br />
                         </h1>
                         <a href="tel:322354642">tel. 32 235 46 42</a>
                     </div>
                     <div className="flex flex-col justify-around border-black border-2 rounded-xl p-2  items-center">
-                        <img src="/morcinka4.jpg" alt="Zdjęcie sklepu" className=" w-96 h-96 object-cover rounded-xl" />
+                        <img src="/morcinka4.jpg" alt="Zdjęcie sklepu" className=" w-96 h-96 object-cover rounded-xl drop-shadow-xl m-2" />
                         <h1 className="font-semibold">Leszczyny, ul. Morcinka 4 <br />
                         </h1>
                         <a href="tel:881947197">tel. 881 947 197</a>
                     </div>
                     <div className="flex flex-col justify-around border-black border-2 rounded-xl p-2  items-center">
-                        <img src="/pojdy81.jpg" alt="Zdjęcie sklepu" className=" w-96 h-96 object-cover rounded-xl" />
+                        <img src="/pojdy81.jpg" alt="Zdjęcie sklepu" className=" w-96 h-96 object-cover rounded-xl drop-shadow-xl m-2" />
                         <h1 className="font-semibold">Leszczyny, ul. Ks. Pojdy 81 <br />
                         </h1>
                         <a href="tel:504859688">tel. 504 859 688</a>
                     </div>
                     <div className="flex flex-col justify-around border-black border-2 rounded-xl p-2  items-center">
-                        <img src="/kochanowskiego42.jpg" alt="Zdjęcie sklepu" className=" w-96 h-96 object-cover rounded-xl" />
+                        <img src="/kochanowskiego42.jpg" alt="Zdjęcie sklepu" className=" w-96 h-96 object-cover rounded-xl drop-shadow-xl m-2" />
                         <h1 className="font-semibold">Czuchów, ul. Kochanowskiego 42 <br />
                         </h1>
                         <a href="tel:512111610">tel. 512 111 610</a>
                     </div>
                     <div className="flex flex-col justify-around border-black border-2 rounded-xl p-2  items-center">
-                        <img src="/rynek7.jpg" alt="Zdjęcie sklepu" className=" w-96 h-96 object-cover rounded-xl" />
+                        <img src="/rynek7.jpg" alt="Zdjęcie sklepu" className=" w-96 h-96 object-cover rounded-xl drop-shadow-xl m-2" />
                         <h1 className=" font-semibold">Czerwionka, ul. Rynek 7 <br />
                         </h1>
                         <a href="tel:512967611">tel. 512 967 611</a>
                     </div>
                     <div className="flex flex-col justify-around border-black border-2 rounded-xl p-2  items-center">
-                        <img src="/brzozowa13.png" alt="Zdjęcie sklepu" className=" w-96 h-96 object-cover object-right rounded-xl" />
+                        <img src="/brzozowa13.png" alt="Zdjęcie sklepu" className=" w-96 h-96 object-cover object-right rounded-xl drop-shadow-xl m-2" />
                         <h1 className=" font-semibold">Ornontowice, ul. Brzozowa 13 <br />
                         </h1>
                         <a href="tel:">tel. n/a</a>
@@ -485,8 +511,8 @@ Pani/Pana dane będą przetwarzane w sposób zautomatyzowany w tym również w f
                         <a href="#Contact" className=" font-bold px-10 ssm:py-2 md:py-0">Kontakt</a>
                     </div>
                     <div className="flex text-3xl ssm:py-2 md:py-0">
-                        <a href="https://www.facebook.com/PiekarniaBaranski" className="px-2"><MdFacebook /> </a>
-                        <a href="https://www.instagram.com/piekarnia_cukierniabaranski?igsh=ajh5Mnc3N21kOTVu" className="px-2"><AiFillInstagram /></a>
+                        <a target="_blank" href="https://www.facebook.com/PiekarniaBaranski" className="px-2"><MdFacebook /> </a>
+                        <a target="_blank" href="https://www.instagram.com/piekarnia_cukierniabaranski?igsh=ajh5Mnc3N21kOTVu" className="px-2"><AiFillInstagram /></a>
                     </div>
                 </div>
                 <div className=" flex ssm:flex-col md:flex-row justify-center border-t-2 border-black p-5 m-10">
@@ -494,7 +520,7 @@ Pani/Pana dane będą przetwarzane w sposób zautomatyzowany w tym również w f
                     </p>
                     <a onClick={togglePolityka} className=" underline px-5 ssm:py-2 md:py-0 cursor-pointer">Polityka prywatności</a> 
                     <p className=" font-light italic">
-                        <a href="https://dawothepony.github.io" className="ssm:py-2 md:py-0">
+                        <a target="_blank" href="https://dawothepony.github.io" className="ssm:py-2 md:py-0">
                         Designed & developed by Dawid Wojtkowski & Agnieszka Miler
                         </a>
                     </p>
