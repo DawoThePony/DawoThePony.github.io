@@ -321,21 +321,21 @@ Pani/Pana dane będą przetwarzane w sposób zautomatyzowany w tym również w f
                 <div className=" h-3/4 md:w-1/3 flex flex-col">
                   <h5 className=" text-lg font-semibold pt-5">Patrycja U.</h5>
                   <h4 className=" text-xl font-bold p-5">"Serdecznie polecam ☺ najlepsze torty, ciasta, itp. Zawsze wszystko pięknie udekorowane ^^ A smak? Obłędny ❤ Polecam ☺"</h4>
-                  <div className="flex text-4xl ssm:mx-auto md:mx-0">
+                  <div className="flex text-4xl ssm:mx-auto md:mx-0 text-yellow-500">
                     <MdStar /><MdStar /><MdStar /><MdStar /><MdStar />
                   </div>
                 </div>
                 <div className=" h-3/4  md:w-1/3 flex flex-col">
                   <h5 className=" text-lg font-semibold pt-5">Monika D.</h5>
                   <h4 className=" text-xl font-bold p-5">"Bardzo dziękujemy za przepyszny tort Oreo ! Byl bardzo smaczny i cudowny, córka zachwycona, jak zawsze !! polecam serdecznie!! 🍰"</h4>
-                  <div className="flex text-4xl ssm:mx-auto md:mx-0">
+                  <div className="flex text-4xl ssm:mx-auto md:mx-0 text-yellow-500">
                     <MdStar /><MdStar /><MdStar /><MdStar /><MdStar />
                   </div>                
                 </div>
                 <div className="md:w-1/3 flex flex-col">
                   <h5 className=" text-lg font-semibold pt-5">Marta W.</h5>
                   <h4 className=" text-xl font-bold p-5">"Bardzo smaczne ciasta i desery !!!!😀😀😀"</h4>
-                  <div className="flex text-4xl ssm:mx-auto md:mx-0">
+                  <div className="flex text-4xl ssm:mx-auto md:mx-0 text-yellow-500">
                      <MdStar /><MdStar /><MdStar /><MdStar /><MdStar />
                   </div>
                 </div>
@@ -485,8 +485,8 @@ Pani/Pana dane będą przetwarzane w sposób zautomatyzowany w tym również w f
                         <a href="#Contact" className=" font-bold px-10 ssm:py-2 md:py-0">Kontakt</a>
                     </div>
                     <div className="flex text-3xl ssm:py-2 md:py-0">
-                        <a href="#" className="px-2"><MdFacebook /> </a>
-                        <a href="#" className="px-2"><AiFillInstagram /></a>
+                        <a href="https://www.facebook.com/PiekarniaBaranski" className="px-2"><MdFacebook /> </a>
+                        <a href="https://www.instagram.com/piekarnia_cukierniabaranski?igsh=ajh5Mnc3N21kOTVu" className="px-2"><AiFillInstagram /></a>
                     </div>
                 </div>
                 <div className=" flex ssm:flex-col md:flex-row justify-center border-t-2 border-black p-5 m-10">
