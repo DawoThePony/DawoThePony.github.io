@@ -419,7 +419,7 @@ Pani/Pana dane będą przetwarzane w sposób zautomatyzowany w tym również w f
                     <div onClick={openMaps} className={"flex border-2 border-black p-2 px-5 font-bold items-center rounded-xl transform duration-500 " + (maps ? 'bg-black text-white' : 'bg:transparent text-black')}><p>Mapa</p></div>
                 </div>
                 {/* Galeria */}
-                <div className={"ssm:mt-20 md:mt-0 md:p-20 lg:grid-cols-3 md:grid-cols-2 sm: grid-cols-1 gap-20 mx-auto justify-items-center " + (maps ? 'hidden' : 'grid')}>
+                <div className={"ssm:mt-20 ssm:mx-5 md:mt-0 md:p-20 lg:grid-cols-3 md:grid-cols-2 sm: grid-cols-1 gap-20 mx-auto justify-items-center " + (maps ? 'hidden' : 'grid')}>
                     <div className="flex flex-col justify-around border-black border-2 rounded-xl p-2  items-center">
                         <img src="/orzeska90.png" alt="Zdjęcie sklepu" className=" w-96 h-96 object-cover object-left rounded-xl" />
                         <h1 className="font-semibold">Ornontowice, ul. Orzeska 90 <br />
